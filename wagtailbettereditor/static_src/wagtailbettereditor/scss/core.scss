@@ -1,0 +1,51 @@
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.nav-wrapper {
+  background: gray;
+  color: white;
+  .logo {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+    span {
+      display: none;
+    }
+  }
+}
+
+.nav-search {
+  margin: 20px 0;
+  padding: 0 20px;
+  label {
+    display: none;
+  }
+  input {
+    width: 100%;
+  }
+  button[type="submit"] {
+    display: none;
+  }
+}
+
+.nav-main {
+  margin: 20px 0;
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  .menu-item a {
+    display: block;
+    padding: 10px 20px;
+  }
+}
+
+.nav-submenu {
+  display: none;
+}
