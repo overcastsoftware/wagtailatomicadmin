@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp build",
+    "start": "gulp"
   },
   "author": "Alex Gleason",
   "license": "GPL-3.0",

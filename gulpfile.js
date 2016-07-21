@@ -15,4 +15,5 @@ gulp.task('watch', function() {
   gulp.watch(paths.sass, ['compile-sass'])
 })
 
-gulp.task('default', ['compile-sass'])
+gulp.task('build', ['compile-sass'])
+gulp.task('default', ['build', 'watch'])
