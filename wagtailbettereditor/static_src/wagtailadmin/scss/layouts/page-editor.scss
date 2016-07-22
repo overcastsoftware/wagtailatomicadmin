@@ -60,7 +60,6 @@
     .object-help {
         display: block;
         position: relative;
-        padding: 0 1.5em;
         margin: 1.5em 0;
 
         &:before {
@@ -97,6 +96,15 @@
             color: inherit;
             font-size: inherit;
             padding: 0 0 0 1.5em;
+        }
+
+        + .object-help {
+            padding: 0 1.5em;
+
+            + fieldset {
+                /* FIXME: This negative margin can be avoided with better markup. */
+                margin-top: -1.5em;
+            }
         }
 
         &:before {

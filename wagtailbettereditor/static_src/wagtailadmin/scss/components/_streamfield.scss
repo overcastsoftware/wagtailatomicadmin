@@ -32,10 +32,6 @@ li.sequence-member {
         }
     }
 
-    &:hover .object-help {
-        opacity: 1;
-    }
-
     .struct-block .fields {
         padding-left: 0;
         padding-right: 0;
@@ -44,10 +40,6 @@ li.sequence-member {
     .struct-block .sequence-container {
         padding-left: 0;
         padding-right: 0;
-
-        .sequence-member-inner {
-            padding: 1.5em 0;
-        }
     }
 
     // The top level sequence doesn't have a sequnce-member-inner. This block is basically for things that should only affect inner blocks
@@ -55,27 +47,6 @@ li.sequence-member {
         position: relative;
         padding: 0 1.5em;
         margin: 1.5em 0;
-
-        .sequence-member {
-            border: 0;
-        }
-
-        // sequences within sequences, such as a ListBlock within StructBlock
-        > .sequence .sequence-inner {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .sequence-type-list .sequence-container-inner {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .sequence-type-list .sequence-member-inner {
-            padding: 0;
-            padding-top: 0.5em;
-            padding-bottom: 1.2em;
-        }
     }
 
     .fields > li {
@@ -129,21 +100,6 @@ li.sequence-member {
 // Controls for ordering and deletion of items in a sequence
 .sequence-controls {
     background-color: $color-grey-4;
-}
-
-// list controls are slightly different as they require closer proximity to their associated fields
-.list-controls {
-    border-radius: 0;
-    background: transparent;
-    top: 1.5em;
-    border: 0;
-    padding: 0;
-    overflow: hidden;
-    height: auto;
-}
-
-.sequence-type-list .object-help {
-    margin-top: 1.5em;
 }
 
 // Menu of other blocks to be added at each position

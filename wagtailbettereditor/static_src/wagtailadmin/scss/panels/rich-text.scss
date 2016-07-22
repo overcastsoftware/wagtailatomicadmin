@@ -38,6 +38,18 @@
     font-family: $font-serif;
     overflow: hidden;
     line-height: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     // Resetting various html tags that have been messed with by Wagtail's main css
     h1 {

@@ -32,8 +32,7 @@ label,
     color: $color-grey-1;
     font-size: 1.1em;
     display: block;
-    padding: 0 0 0.8em;
-    margin: 0;
+    margin: 0 0 0.8em;
     line-height: 1.3em;
 
     .checkbox &,
@@ -1165,7 +1164,11 @@ li.inline:first-child {
 
     .field-col {
         float: left;
-        padding-left: 0;
+        padding-left: 1.5em;
+
+        &:first-child {
+            padding-left: 0;
+        }
 
         // anything less than 4 columns or greater than 6 is impractical
         &.col4 {
