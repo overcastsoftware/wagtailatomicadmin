@@ -31,11 +31,11 @@ class egg_info(base_egg_info):
 
 
 setup(
-    name='wagtailbettereditor',
+    name='wagtailatomicadmin',
     version=__version__,
-    description='Improvement to Wagtail editor UI.',
+    description='An admin UI for Wagtail that encourages nesting StreamField blocks.',
     long_description=long_description,
-    url='https://github.com/alexgleason/wagtailbettereditor',
+    url='https://github.com/alexgleason/wagtailatomicadmin',
     author='Alex Gleason',
     author_email='alex@alexgleason.me',
     license='MIT',
