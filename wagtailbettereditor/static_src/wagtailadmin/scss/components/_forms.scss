@@ -17,7 +17,7 @@ form {
 
 fieldset {
     border: 0;
-    padding: 0 0 2em;
+    padding: 0;
     margin: 0;
 }
 
@@ -59,13 +59,11 @@ select,
     font-size: 1.2em;
     font-weight: 300;
     outline: none;
-
-    &:hover {
-        background-color: $color-white;
-    }
+    transition: all 0.2s ease;
 
     &:focus {
-        border-color: darken($color-input-focus, 40%);
+        border-color: $color-teal;
+        box-shadow: 0 0 2px $color-teal;
         outline: none;
         background-color: $color-white;
     }
@@ -78,6 +76,10 @@ select,
         cursor: default;
         color: $color-grey-4;
     }
+}
+.richtext {
+  padding-top: 0;
+  padding-bottom: 0; 
 }
 
 // select boxes
@@ -845,13 +847,6 @@ button {
     }
 }
 
-.fields > li,
-.field-col {
-    @include clearfix();
-    padding-top: 0.5em;
-    padding-bottom: 1.2em;
-}
-
 .field-row {
     @include clearfix();
 
@@ -1123,32 +1118,12 @@ li.inline:first-child {
     }
 }
 
-// Transitions
-fieldset,
-input,
-textarea,
-select {
-    @include transition(background-color 0.2s ease);
-}
-
-input[type=submit],
-input[type=reset],
-input[type=button],
-.button,
-button {
-    // @include transition(background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease);
-}
-
 .help {
-    @include transition(opacity 0.2s ease);
+    transition: opacity 0.2s ease;
 }
 
 @media screen and (min-width: $breakpoint-mobile) {
     label {
-        @include column(2);
-        padding-top: 1.2em;
-        padding-left: 0;
-
         .radio_select &,
         .model_multiple_choice_field &,
         .boolean_field &,
@@ -1170,14 +1145,6 @@ button {
             float: none;
             width: auto;
         }
-    }
-
-    .fields {
-        max-width: 800px;
-    }
-
-    .field {
-        @include row();
     }
 
     .field-col {
