@@ -36,12 +36,8 @@
 }
 
 .tab-content {
-    width: calc(80% - 1px);
-    float: left;
     background: $color-white;
     border-bottom: 1px solid $color-grey-3;
-    border-right: 1px solid $color-grey-3;
-    border-bottom-right-radius: 4px;
 }
 
 // An object is the basic wrapper around any field or group of fields in the editor interface

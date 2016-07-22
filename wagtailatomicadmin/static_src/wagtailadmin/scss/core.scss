@@ -111,71 +111,42 @@ body {
 }
 
 footer {
+    @include transition(bottom 0.5s ease 1s);
     @include row();
-    transition: bottom 0.5s ease 1s;
-    width: calc(20% - 2px);
-    float: right;
-    padding-left: 1.5em;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    background: $color-grey-1;
+    position: fixed;
+    bottom: 0;
+    padding: 0.5em;
+    width: 90%;
+    margin: 0 5%;
+    color: $color-white;
 
     ul {
         @include unlist();
     }
 
-    > ul {
-        background: $color-white;
-        padding: 0 1.5em;
-        margin: 1.5em 0;
-        border: 1px solid $color-grey-3;
-        border-radius: 4px;
-
-        .preview {
-            margin: 1.5em 0;
-        }
+    li {
+        float: left;
     }
 
     .actions {
-        width: 100%;
-
-        /* This section is a hack so I don't have to edit the template.
-           TODO: improve this by editing the template. */
-        .dropdown {
-            margin: 1.5em 0;
-
-            input, button {
-                height: 43px;
-                float: none;
-                width: 100%;
-            }
-
-            ul {
-                box-shadow: none;
-                background: transparent;
-                overflow: visible;
-
-                li {
-                    border: none;
-                    background: $color-teal;
-                    overflow: visible;
-                }
-            }
-
-            &::after {
-              display: none;
-            }
-        }
-
-        .dropdown-toggle {
-            top: 0;
-        }
-
-        button {
-            width: 100%;
-            height: 43px;
-        }
+        width: 250px;
+        margin-right: $grid-gutter-width/2;
     }
 
     .meta {
+        float: right;
+        text-align: right;
+        padding: 7px $grid-gutter-width/2;
         font-size: 0.85em;
+
+        p {
+            margin: 0;
+            margin-right: $grid-gutter-width;
+            white-space: nowrap;
+        }
 
         a {
             color: inherit;
@@ -437,6 +408,11 @@ footer,
         img.wagtail-logo:hover {
             transform: rotate(4deg);
         }
+    }
+
+    footer {
+        width: 80%;
+        margin-left: 50px;
     }
 
     .content {
