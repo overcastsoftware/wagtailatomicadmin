@@ -2,13 +2,13 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 
 var paths = {
-  sass: 'wagtailbettereditor/static_src/wagtailadmin/scss/**/*.scss'
+  sass: 'wagtailatomicadmin/static_src/wagtailadmin/scss/**/*.scss'
 }
 
 gulp.task('compile-sass', function() {
   return gulp.src(paths.sass)
-    .pipe(sass({includePaths: ['node_modules', 'wagtailbettereditor/static_src/']}))
-    .pipe(gulp.dest('wagtailbettereditor/static/wagtailadmin/css'))
+    .pipe(sass({includePaths: ['node_modules', 'wagtailatomicadmin/static_src/']}))
+    .pipe(gulp.dest('wagtailatomicadmin/static/wagtailadmin/css'))
 })
 
 gulp.task('watch', function() {

@@ -8,7 +8,7 @@ from os import path
 from setuptools import find_packages, setup
 from setuptools.command.egg_info import egg_info as base_egg_info
 
-from wagtailbettereditor import __version__
+from wagtailatomicadmin import __version__
 
 here = path.abspath(path.dirname(__file__))
 
