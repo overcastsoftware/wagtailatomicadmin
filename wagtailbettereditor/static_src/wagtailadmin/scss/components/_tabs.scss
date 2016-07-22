@@ -81,13 +81,7 @@
 }
 
 .tab-content {
-    width: calc(80% - 1px);
-    float: left;
-    background: $color-white;
     padding-bottom: 4em;
-    border-bottom: 1px solid $color-grey-3;
-    border-right: 1px solid $color-grey-3;
-    border-bottom-right-radius: 4px;
 
     section {
         display: none;
