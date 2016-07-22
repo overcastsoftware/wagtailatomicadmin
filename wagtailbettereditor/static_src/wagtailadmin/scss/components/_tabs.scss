@@ -29,7 +29,7 @@
 
         &:hover {
             color: $color-white;
-            border-top-color: $color-teal-dark;
+            border-top-color: lighten($color-teal, 8%);
         }
     }
 
@@ -81,6 +81,14 @@
 }
 
 .tab-content {
+    width: calc(80% - 1px);
+    float: left;
+    background: $color-white;
+    padding-bottom: 4em;
+    border-bottom: 1px solid $color-grey-3;
+    border-right: 1px solid $color-grey-3;
+    border-bottom-right-radius: 4px;
+
     section {
         display: none;
         padding-top: 1em;
@@ -93,7 +101,7 @@
 
 @media screen and (min-width: $breakpoint-mobile) {
     .tab-nav {
-        // For cases where tab-nav should merge with header 
+        // For cases where tab-nav should merge with header
         &.merged {
             background-color: $color-header-bg;
         }

@@ -8,6 +8,10 @@
         margin-bottom: 10em;
     }
 
+    .content {
+        background-color: transparent;
+    }
+
     .breadcrumb {
         margin-top: -1.2em;
         margin-bottom: 2em;
@@ -160,33 +164,6 @@
         }
     }
 
-    .multiple {
-        padding: 4.5em 0 0;
-
-        fieldset {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    .fields {
-        padding: 0 1.5em;
-        margin: 1.5em 0;
-
-        .field {
-            margin: 1.5em 0;
-        }
-    }
-
-    // removes top padding from multiples used within another panel
-    .fields .multiple {
-        padding-top: 0;
-    }
-
-    .add {
-        padding-top: 1em;
-    }
-
     &.empty {
         border-bottom: 1px solid $color-white;
 
@@ -205,6 +182,7 @@
             width: 3.3em;
             height: 3.3em;
             padding: 0;
+            margin: 0;
             cursor: pointer;
 
             .button {
@@ -227,10 +205,6 @@
                     background-color: darken($color-salmon, 5%);
                 }
             }
-        }
-
-        .multiple {
-            padding: 0;
         }
     }
 
@@ -266,6 +240,7 @@
     line-height: 1.6em;
     padding-left: 0;
     padding-right: 0;
+    background: transparent;
 }
 
 .title input,
@@ -314,6 +289,78 @@ footer .preview {
     }
 }
 
+// Controls for ordering and deletion of items in a sequence
+.controls,
+.sequence-controls {
+    transition: opacity 0.2s ease;
+    display: flex;
+    justify-content: flex-end;
+    top: -30px;
+    right: 0;
+    z-index: 1;
+    overflow: visible;
+    padding: 0 0 0 1em;
+    height: 30px;
+
+    h3 {
+        margin: 0;
+        font-size: 0.7rem;
+        display: inline-block;
+        margin-right: 1em;
+        line-height: 1.8rem;
+        flex: 1;
+
+        label {
+            color: $color-grey-2;
+            font-weight: normal;
+            text-transform: uppercase;
+            float: none;
+            width: auto;
+            padding: 0;
+            margin: 0;
+            margin-top: 7px;
+        }
+    }
+
+    button.icon.text-replace {
+        width: 1.8rem;
+        height: 1.8rem;
+
+        &:before {
+            line-height: 1.3em;
+            font-size: 0.9rem;
+        }
+    }
+
+    button.icon {
+        background: transparent;
+        border: none;
+        &::before {
+            color: $color-grey-2;
+        }
+        &:hover {
+            background: transparent;
+            &::before {
+                color: $color-teal;
+            }
+        }
+    }
+
+    // .buttons only exists for menus in stream_member.html
+    .button-group {
+        float: right;
+    }
+
+    &:hover .buttons,
+    &:hover label {
+        opacity: 1;
+    }
+
+    .disabled {
+        display: none;
+    }
+}
+
 @media screen and (min-width: $breakpoint-mobile) {
     .page-editor .breadcrumb {
         margin-top: -1.8em;
@@ -344,12 +391,6 @@ footer .preview {
                 width: auto;
                 padding: inherit;
             }
-        }
-
-        .multiple {
-            @include column(10);
-            padding-left: 0;
-            padding-right: 0;
         }
     }
 }

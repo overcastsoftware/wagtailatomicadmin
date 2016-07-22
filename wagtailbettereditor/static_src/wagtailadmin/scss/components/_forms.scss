@@ -79,7 +79,7 @@ select,
 }
 .richtext {
   padding-top: 0;
-  padding-bottom: 0; 
+  padding-bottom: 0;
 }
 
 // select boxes
@@ -355,6 +355,9 @@ input[type=checkbox]:checked:before {
         box-sizing: border-box;
         -webkit-font-smoothing: auto;
         -moz-appearance: none;
+        &:hover {
+          background: transparent;
+        }
     }
 
     &:hover {
@@ -650,19 +653,21 @@ button {
 
 
 .multiple {
-    padding: 0;
-    max-width: 1024px - 50px;
-    overflow: hidden;
+    padding: 0 1.5em;
+    margin: 1.5em 0;
 
     > li {
-        @include row();
-        border-radius: 2px;
+        border-radius: 4px;
         position: relative;
-        overflow: hidden;
-        background-color: $color-white;
-        padding: 1em 10em 1em 1.5em; // 10em padding leaves room for controls
-        margin-bottom: 1em;
-        border: 1px solid lighten($color-grey-4, 3%); // really trying to avoid creating more greys, but this one is better than grey 4 or 5
+        background-color: $color-sequence-bg;
+        border: 1px solid $color-grey-3;
+        margin: 1.5em 0;
+
+        .multi-field {
+          background-color: $color-white;
+          border: 1px solid $color-grey-3;
+          border-radius: 4px;
+        }
     }
 
     &.moving {
@@ -683,8 +688,8 @@ button {
     .controls {
         position: absolute;
         z-index: 1;
-        right: 1em;
-        top: 1em;
+        right: 0;
+        top: 0;
         color: $color-white;
 
         li {
@@ -704,15 +709,26 @@ button {
 
 }
 
+.fields {
+    padding: 0 1.5em;
+    margin: 1.5em 0;
+
+    > li {
+        margin: 1.5em 0;
+    }
+
+    // removes top padding from multiples used within another panel
+    .multiple {
+        padding-top: 0;
+    }
+}
+
 // wrapper around add button for mutliple objects
 .add {
     font-weight: 700;
     cursor: pointer;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    clear: both;
+    padding: 0 1.5em;
+    margin: 1.5em 0;
 }
 
 // Other text
