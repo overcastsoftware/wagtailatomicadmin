@@ -1,6 +1,6 @@
 Wagtail Atomic Admin
 ====================
-This is an amended version of the Wagtail admin UI that makes it easier for users more easily visualises nested items and corrects a number of minor styling issues. Changes
+This is an amended version of the Wagtail admin UI that makes it easier for users more easily visualises nested items and corrects a number of minor styling issues. Changes:
 
  - Much improved UI for nested StreamFields
  - Consistency of UI presentation between inline panels, streamfield panels, multipanels etc.
@@ -18,4 +18,4 @@ Install
 
     pip install wagtailatomicadmin
 
-Then add `wagtailatomicadmin` to your installed apps.
+Then add `wagtailatomicadmin` to your installed apps. Make sure to place it *before* `wagtail.wagtailadmin` so Django will give it precedence when searching for files.
