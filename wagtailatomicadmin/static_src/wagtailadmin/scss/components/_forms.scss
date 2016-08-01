@@ -423,6 +423,7 @@ input[type=checkbox]:checked:before {
         border-color: $color-grey-3;
         color: lighten($color-grey-2, 15%);
         cursor: default;
+        display: none;
     }
 
     &.button-secondary:disabled,
@@ -431,6 +432,7 @@ input[type=checkbox]:checked:before {
         background-color: $color-white;
         border-color: $color-grey-3;
         color: $color-grey-3;
+        display: none;
     }
 
     &.button-nostroke {

@@ -48,7 +48,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
-    keywords='development',
+    keywords=['development'],
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
